@@ -13,6 +13,7 @@ lib/
 **/node_modules/*
 **/.firebaserc
 **/ticfamnit-firebase-adminsdk-618ac-3d66c087f7.json
+**/ticfamnit-firebase-adminsdk-618ac-3d66c087f7copy.json
 ### Firebase Patch ###
 .runtimeconfig.json
 .firebase/
