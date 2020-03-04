@@ -12,7 +12,7 @@ lib/
 .idea
 **/node_modules/*
 **/.firebaserc
-
+**/ticfamnit-firebase-adminsdk-618ac-3d66c087f7.json
 ### Firebase Patch ###
 .runtimeconfig.json
 .firebase/
@@ -37,7 +37,7 @@ lib/
 .DS_Store
 .AppleDouble
 .LSOverride
-ticfamnit-firebase-adminsdk-618ac-3d66c087f7.json
+
 # Icon must end with two \r
 Icon
 
