@@ -1,27 +1,25 @@
+// const admin = require('firebase-admin');
+
 const cors = require('cors');
 const express = require('express');
+const bodyParser = require('body-parser');
+const Routes = require('./router')
 
-const simpleServer = express();
-simpleServer.get('*', (request, response) => {
-  response.send('Hello from Express on Firebase!');
-});
+// const admin = require('firebase-admin');
+// admin.initializeApp();
+// const db = admin.firestore();
+// const { db } = require('./db')
 
-const corsServer = express();
-corsServer.use(cors({origin: true}));
-corsServer.get('*', (request, response) => {
-  response.send('Hello from Express on Firebase with CORS!');
-});
+const app = express();
 
-const cleanPathServer = express();
-cleanPathServer.use(cors({origin: true}));
-cleanPathServer.get('*', (request, response) => {
-  response.send(
-    'Hello from Express on Firebase with CORS! No trailing \'/\' required!'
-  );
-});
+app.use(cors({origin: true}));
+app.use(bodyParser.json())
+
+app.use('/', Routes.auth)
+app.use('/projects', Routes.projects)
+app.use('/users', Routes.users)
+
 
 module.exports = {
-  simpleServer,
-  corsServer,
-  cleanPathServer
+  app
 };
